@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/colorAccent"
+    android:layout_margin="2dp">
+
+    <TextView
+        android:id="@+id/textViewTitleTest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Шкала реактивной и личностной тревожности Ч.Д.Спилбергера – Ю.Л.Ханин"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNumberQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNumberQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="185"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textViewTitleTest"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textViewAuthor"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:fontFamily="sans-serif-light"-->
+<!--            android:text="Автор: Я.Стреляу"-->
+<!--            android:textColor="@android:color/primary_text_dark"-->
+<!--            android:textSize="12dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textViewAmountQuestion"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textViewTitleTest" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textViewAmountQuestion"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="Вопросов:18"-->
+<!--            android:textColor="@android:color/primary_text_dark"-->
+<!--            android:textSize="12dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textViewDate"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textViewTitleTest" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textViewDate"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:text="Дата: 24.08.2020"-->
+<!--            android:textColor="@android:color/primary_text_dark"-->
+<!--            android:textSize="12dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textViewTitleTest" />-->
+<!--    </LinearLayout>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewStar"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:src="@drawable/ic_baseline_star_border_24"/>-->
+
+</android.support.constraint.ConstraintLayout>
