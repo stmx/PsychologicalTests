@@ -23,6 +23,8 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
     MainPresenter mPresenter;
 
     FragmentManager mFragmentManager;
+
+    Navigation mNavigation;
     private static NavigationComponent sNavigationComponent;
 
     @Override
@@ -31,13 +33,19 @@ public class MainActivity extends MvpAppCompatActivity implements MainView {
         setContentView(R.layout.activity_main);
 //        new DownloadJSON2Database().startDownload();
         mFragmentManager =getSupportFragmentManager();
+        mNavigation = new Navigation(MainActivity.this);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        sNavigationComponent = DaggerNavigationComponent.builder().navigationModule(new NavigationModule(new Navigation(MainActivity.this))).build();
+        sNavigationComponent = DaggerNavigationComponent.builder().navigationModule(new NavigationModule(mNavigation)).build();
     }
     public static NavigationComponent getNavigationComponent() {
         return sNavigationComponent;
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mNavigation.resetActivity();
+    }
 
     @Override
     public void showFragment(TestFragment fragment) {

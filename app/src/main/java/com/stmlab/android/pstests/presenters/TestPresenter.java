@@ -22,8 +22,6 @@ public class TestPresenter extends MvpPresenter<TestView> implements Presenter {
 
     TestProvider mProvider;
 
-    TestDescriptionFragment mDescriptionFragment;
-
     public TestPresenter() {
         Log.d("Moxy", "TestPresenter.constructor");
         mProvider = new TestProvider(this);
@@ -40,8 +38,7 @@ public class TestPresenter extends MvpPresenter<TestView> implements Presenter {
 
     public void onItemTestClick(TestModel model) {
         Log.d("Moxy", "TestPresenter.onItemTestClick");
-        mDescriptionFragment = TestDescriptionFragment.newInstance(model.getTestId());
-        getViewState().showFragment(mDescriptionFragment);
+        getViewState().showFragment(TestDescriptionFragment.newInstance(model.getTestId()));
     }
 
     public void viewDetached() {

@@ -10,22 +10,20 @@ import com.stmlab.android.pstests.views.QuestionAnswerView;
 
 @InjectViewState
 public class QuestionAnswerPresenter extends MvpPresenter<QuestionAnswerView> {
-    QuestionFragment questionFragment;
-    AnswerFragment answerFragment;
+    private long mTestId;
 
     public QuestionAnswerPresenter() {
         Log.d("Moxy", "QuestionAnswerPresenter.constructor");
     }
 
     public void setTestId(long testId) {
-        questionFragment = QuestionFragment.newInstance(testId,0);
-        answerFragment = AnswerFragment.newInstance(testId);
+        mTestId = testId;
         Log.d("Moxy", "QuestionAnswerPresenter.constructor");
     }
 
     @Override
     protected void onFirstViewAttach() {
-        getViewState().showFragments(questionFragment,answerFragment);
+        getViewState().showFragments(QuestionFragment.newInstance(mTestId,0),AnswerFragment.newInstance(mTestId));
         Log.d("Moxy", "QuestionAnswerPresenter.onFirstViewAttach");
     }
 }

@@ -17,9 +17,6 @@ import javax.inject.Inject;
 @InjectViewState
 public class TestDescriptionPresenter extends MvpPresenter<DescriptionView> implements Presenter {
 
-    QuestionAnswerFragment mQuestionAnswerFragment;
-
-
     public TestDescriptionPresenter() {
         Log.d("Moxy", "TestDescriptionPresenter.constructor");
     }
@@ -38,8 +35,7 @@ public class TestDescriptionPresenter extends MvpPresenter<DescriptionView> impl
     public void onButtonStartClick(long testId) {
 //        QuestionAnswerFragment answerFragment = new QuestionAnswerFragment();
 //        mNavigation.navigateTo(answerFragment);
-        mQuestionAnswerFragment = QuestionAnswerFragment.newInstance(testId);
-        getViewState().showFragment(mQuestionAnswerFragment);
+        getViewState().showFragment(QuestionAnswerFragment.newInstance(testId));
         Log.d("Moxy", "TestDescriptionPresenter.onButtonStartClick");
     }
 }

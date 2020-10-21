@@ -9,15 +9,14 @@ import com.stmlab.android.pstests.views.MainView;
 
 @InjectViewState
 public class MainPresenter extends MvpPresenter<MainView> {
-    TestFragment mFragment;
+//    TestFragment mFragment;
     public MainPresenter() {
-        mFragment = new TestFragment();
         Log.d("Moxy", "MainPresenter.constructor");
     }
 
     @Override
     protected void onFirstViewAttach() {
-        getViewState().showFragment(mFragment);
+        getViewState().showFragment(new TestFragment());
         Log.d("Moxy", "MainPresenter.onFirstViewAttach");
     }
 }
